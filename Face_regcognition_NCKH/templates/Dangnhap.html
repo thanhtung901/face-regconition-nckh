@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Ditector</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+        <div class="container">
+            <div class="input__info align-items-center">
+                <h3>Đăng nhập</h3>
+                <form action="/login" method="POST">
+                    <div class="ip">
+                        <label for="username">Tên tài khoản</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div class="ip">
+                        <label for="pass1">Mật khẩu</label>
+                        <input type="password" id="pass1" name="password">
+                    </div>
+                    <div class="btn_re_er btn_lg flex-column gap-2">
+                        <button value="LOGIN" type="submit" class="btn btn-primary" name="btlogin">Đăng nhập </button>
+<!--                        <p style="font-size: 12px;">Chưa có tài khoản? <a onclick="nextpage()" type="submit" >Đăng ký</a></p>-->
+<!--                        <script>-->
+<!--                            function nextpage(){-->
+<!--                                window.location('D:\\Pytorch\\Face_regcognition_NCKH\\templates\\Dangky.html');-->
+<!--                            }-->
+<!--                        </script>-->
+                    </div>
+                </form>
+                <form action="{{ url_for('signup') }}" method="get">
+<!--                    <input type="submit" value="Đăng ký">-->
+                    <p style="font-size: 12px;">Chưa có tài khoản? <input type="submit" value="Đăng ký"></input></p>
+                </form>
+            </div>
+            <img id="bg" src="{{ url_for('video_feed') }}">
+        </div>
+    </div>
+</body>
+
+</html>
