@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Ditector</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+        <div class="container">
+            <form action = "/faceregistration", method="POST">
+            <div class="input__info">
+                <h3 style="padding-bottom: 4px;">Đăng ký thông tin</h3>
+
+                <div class="ip">
+                    <label for="username">Tên tài khoản</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="ip">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name">
+                </div>
+                
+                <div class="dt_cl" style="display: flex; gap: 4px;justify-content: space-between;">
+                    <div class="ip mssv">
+                        <label for="mssv">Mã số sinh viên</label>
+                        <input type="text" id="mssv" name = "mssv">
+                    </div>
+                    <div class="ip">
+                        <label for="class">Lớp</label>
+                        <input type="text" id="class">
+                    </div>
+                </div>
+                <div class="ip">
+                    <label for="pass1">Mật khẩu</label>
+                    <input type="password" id="pass1" name = "pass1">
+                </div>
+                <div class="ip">
+                    <label for="pass2">Nhập lại mặt khẩu</label>
+                    <input type="password" id="pass2" name = "pass2">
+                </div>
+                <div class="btn_re_er">
+                    <button type="submit" value="SIGN UP" class="btn btn-danger" name = "btdangky">Đăng ký </button>
+                </div>
+            </div>
+            </form>
+                <div class="cam">
+                    <div class="camImg">
+                        <img id="bg" src="{{ url_for('video_signup') }}">
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
